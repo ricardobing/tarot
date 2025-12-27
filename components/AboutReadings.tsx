@@ -2,6 +2,7 @@ import Section from './Section'
 import SectionTitle from './SectionTitle'
 import { Heart, Briefcase, Lock as LockIcon, Compass, RefreshCw } from 'lucide-react'
 import WhatsAppButton from './WhatsAppButton'
+import Image from 'next/image'
 
 export default function AboutReadings() {
   return (
@@ -35,6 +36,14 @@ export default function AboutReadings() {
         </div>
 
         <div className="space-y-6">
+          <div className="relative h-64 rounded-2xl overflow-hidden mb-6 shadow-xl">
+            <Image
+              src="https://images.unsplash.com/photo-1595123550441-d377e017de6a?w=800&q=80&fit=crop"
+              alt="Lectura de Tarot Profesional"
+              fill
+              className="object-cover"
+            />
+          </div>
           <div className="bg-gradient-to-br from-mystic-500 to-night-600 p-8 rounded-2xl text-white shadow-xl">
             <h3 className="text-2xl font-bold mb-6">Enfoque de la lectura</h3>
             <ul className="space-y-4">

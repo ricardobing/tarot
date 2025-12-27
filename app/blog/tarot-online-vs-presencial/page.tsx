@@ -118,8 +118,8 @@ export default function ArticlePage() {
 
             <div className="bg-mystic-50 border-l-4 border-mystic-500 p-6 rounded-r-lg my-8">
               <p className="text-mystic-900 font-semibold text-lg italic">
-                "La energía no conoce distancias. Una lectura online bien hecha conecta igual que una presencial, 
-                porque lo que importa es la intención y la apertura del consultante."
+                &ldquo;La energía no conoce distancias. Una lectura online bien hecha conecta igual que una presencial, 
+                porque lo que importa es la intención y la apertura del consultante.&rdquo;
               </p>
             </div>
 

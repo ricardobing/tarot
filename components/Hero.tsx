@@ -8,8 +8,8 @@ export default function Hero() {
       {/* Background con overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?w=1920&q=80"
-          alt="Cartas de Tarot"
+          src="https://images.unsplash.com/photo-1617447167817-a4e49a4a8f4e?w=1920&q=80&fit=crop"
+          alt="Cartas de Tarot Místicas"
           fill
           className="object-cover opacity-30"
           priority

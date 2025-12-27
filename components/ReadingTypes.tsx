@@ -2,6 +2,7 @@ import Section from './Section'
 import SectionTitle from './SectionTitle'
 import { Clock, Sparkles, Heart, Calendar } from 'lucide-react'
 import WhatsAppButton from './WhatsAppButton'
+import Image from 'next/image'
 
 export default function ReadingTypes() {
   const types = [
@@ -13,6 +14,7 @@ export default function ReadingTypes() {
       price: 'Consultá valor',
       highlight: false,
       message: 'Hola, me interesa la tirada general',
+      image: 'https://images.unsplash.com/photo-1579170053380-58064b2dee67?w=400&h=300&fit=crop',
     },
     {
       icon: Heart,
@@ -22,6 +24,7 @@ export default function ReadingTypes() {
       price: 'Consultá valor',
       highlight: true,
       message: 'Hola, quiero una tirada específica sobre...',
+      image: 'https://images.unsplash.com/photo-1551269901-5c5e14c25df7?w=400&h=300&fit=crop',
     },
     {
       icon: Calendar,
@@ -31,6 +34,7 @@ export default function ReadingTypes() {
       price: 'Consultá valor',
       highlight: false,
       message: 'Hola, me interesa la tirada de año personal',
+      image: 'https://images.unsplash.com/photo-1518241353330-0f0607d514ca?w=400&h=300&fit=crop',
     },
     {
       icon: Heart,
@@ -64,7 +68,18 @@ export default function ReadingTypes() {
               </div>
             )}
             
-            <div className={`p-6 ${type.highlight ? 'pt-14' : ''}`}>
+            {/* Imagen de las cartas */}
+            <div className="relative h-48 overflow-hidden">
+              <Image
+                src={type.image}
+                alt={type.name}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-mystic-purple-900" />
+            </div>
+            
+            <div className={`p-6 ${type.highlight ? 'pt-6' : ''}`}>
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 mb-4">
                 <type.icon className="w-8 h-8 text-white" />
               </div>

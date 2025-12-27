@@ -3,6 +3,7 @@ import TrustBar from '@/components/TrustBar'
 import AboutReadings from '@/components/AboutReadings'
 import WhyConsult from '@/components/WhyConsult'
 import ReadingTypes from '@/components/ReadingTypes'
+import TarotGallery from '@/components/TarotGallery'
 import AboutProfessional from '@/components/AboutProfessional'
 import HowItWorks from '@/components/HowItWorks'
 import FAQ from '@/components/FAQ'
@@ -44,15 +45,16 @@ export default function Home() {
         <AboutReadings />
         <WhyConsult />
         <ReadingTypes />
+        <TarotGallery />
         <AboutProfessional />
         <HowItWorks />
         <FAQ />
         <Testimonials />
         <TrustGuarantee />
         <FinalCTA />
-        <Footer />
-        <FloatingWhatsApp />
       </main>
+      <Footer />
+      <FloatingWhatsApp />
     </>
   )
 }

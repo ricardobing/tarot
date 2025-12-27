@@ -9,6 +9,8 @@ import Image from 'next/image'
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
+  const backgroundImage = 'https://images.unsplash.com/photo-1532798442725-d26e50b5aa5b?w=1920&h=800&fit=crop&q=80'
+
   const testimonials = [
     {
       name: 'María L.',
@@ -70,13 +72,25 @@ export default function Testimonials() {
 
   return (
     <Section id="testimonios" background="gradient">
-      <SectionTitle 
-        title="Lo que dicen quienes consultaron"
-        subtitle="Testimonios reales de personas que encontraron claridad"
-      />
+      {/* Fondo con imagen de cartas de tarot */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={backgroundImage}
+          alt="Tarot cards background"
+          fill
+          className="object-cover opacity-10"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-mystic-purple-900/90 via-mystic-purple-900/95 to-mystic-purple-900" />
+      </div>
+      
+      <div className="relative z-10">
+        <SectionTitle 
+          title="Lo que dicen quienes consultaron"
+          subtitle="Testimonios reales de personas que encontraron claridad"
+        />
 
-      {/* Desktop: Grid de 3 columnas */}
-      <div className="hidden md:grid md:grid-cols-3 gap-6 mb-8">
+        {/* Desktop: Grid de 3 columnas */}
+        <div className="hidden md:grid md:grid-cols-3 gap-6 mb-8">
         {testimonials.slice(0, 3).map((testimonial, index) => (
           <TestimonialCard key={index} testimonial={testimonial} />
         ))}
@@ -122,6 +136,7 @@ export default function Testimonials() {
         {testimonials.slice(3).map((testimonial, index) => (
           <TestimonialCard key={index + 3} testimonial={testimonial} />
         ))}
+      </div>
       </div>
     </Section>
   )
